@@ -1,0 +1,37 @@
+<resources>
+    <string name="design_list_title">My plants</string>
+    <string name="design_upcoming">Upcoming watering</string>
+    <string name="design_list_hint">Plants needing water come first</string>
+    <string name="design_details_title">Plant details</string>
+    <string name="design_editor_title">New plant</string>
+    <string name="design_editor_hint">Set a watering schedule</string>
+    <string name="design_edit">Edit</string>
+    <string name="design_add">Add plant</string>
+    <string name="design_back">Back</string>
+    <string name="design_next">Next watering</string>
+    <string name="design_next_on">Next watering · %1$s</string>
+    <string name="design_last">Last watered</string>
+    <string name="design_interval">Watering interval</string>
+    <string name="design_every_seven">Every 7 days</string>
+    <string name="design_note">Note</string>
+    <string name="design_sample_note">У окна на кухне</string>
+    <string name="design_water">Watered today</string>
+    <string name="design_delete">Delete plant</string>
+    <string name="design_name">Plant name</string>
+    <string name="design_name_hint">For example, monstera</string>
+    <string name="design_days_label">Watering interval in days</string>
+    <string name="design_note_label">Note (optional)</string>
+    <string name="design_note_hint">Location or care details</string>
+    <string name="design_save">Save</string>
+    <string name="design_name_error">Enter a plant name</string>
+    <string name="design_days_error">Enter a whole number from 1 to 365</string>
+    <string name="design_empty_title">No plants yet</string>
+    <string name="design_empty_hint">Add your first plant and set a watering schedule</string>
+    <string name="design_today_status">Water today</string>
+    <string name="design_overdue_status">1 day overdue</string>
+    <string name="design_future_status">In 4 days</string>
+    <string name="design_today_date">Oct 8, 2026</string>
+    <string name="design_last_date">Oct 1, 2026</string>
+    <string name="design_overdue_date">Oct 7, 2026</string>
+    <string name="design_future_date">Oct 12, 2026</string>
+</resources>
