@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="800" viewBox="0 0 360 800">
+<rect width="360" height="800" fill="#F6F8F4"/>
+<text x="16" y="18.560000000000002" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1D2B20">9:41</text>
+<rect x="292" y="16" width="3" height="4" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="297" y="13" width="3" height="7" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="302" y="10" width="3" height="10" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="320" y="10" width="20" height="9" rx="2" fill="#1D2B20" stroke="none"/>
+<rect x="341" y="13" width="2" height="3" rx="0" fill="#1D2B20" stroke="none"/>
+<polyline points="29,44 19,54 29,64" fill="none" stroke="#1D2B20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="19,54 38,54" fill="none" stroke="#1D2B20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56" y="62.6" font-family="Arial, sans-serif" font-size="20" font-weight="600" fill="#1D2B20">Карточка растения</text>
+<text x="276.3385416666667" y="60.32" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#2E6B45">Изменить</text>
+<rect x="124" y="786" width="112" height="4" rx="2" fill="#1D2B20" stroke="none"/>
+<rect x="136" y="104" width="88" height="88" rx="44.0" fill="#E7F1E6" stroke="none"/>
+<polyline points="162.4,164.72 158.0,146.24 167.68,133.04 183.52,126.88 202.0,125.12 199.36,146.24 190.56,161.2 176.48000000000002,168.24 162.4,164.72" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="158.88,170.88 191.44,137.44" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="117.5" y="234.88" font-family="Arial, sans-serif" font-size="26" font-weight="600" fill="#1D2B20">Монстера</text>
+<rect x="16" y="272" width="328" height="140" rx="16" fill="#E7F1E6" stroke="none"/>
+<text x="36" y="306.08" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#536457">Следующий полив</text>
+<text x="36" y="345.12" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#1D2B20">8 окт. 2026</text>
+<rect x="36" y="368" width="105.328125" height="24" rx="8" fill="#FFF1D5" stroke="none"/>
+<text x="44" y="384.56" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#8A5B16">Полив сегодня</text>
+<rect x="16" y="436" width="328" height="190" rx="16" fill="#FFFFFF" stroke="none"/>
+<text x="32" y="462.56" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#536457">Интервал полива</text>
+<text x="32" y="488.08" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#1D2B20">Каждые 7 дней</text>
+<text x="32" y="516.56" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#536457">Последний полив</text>
+<text x="32" y="542.08" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#1D2B20">1 окт. 2026</text>
+<text x="32" y="570.56" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#536457">Заметка</text>
+<text x="32" y="596.08" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#1D2B20">У окна на кухне</text>
+<rect x="16" y="650" width="328" height="52" rx="16" fill="#2E6B45" stroke="none"/>
+<text x="124.17708333333334" y="680.32" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Полито сегодня</text>
+<text x="117.0078125" y="742.32" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#9D3933">Удалить растение</text>
+</svg>
