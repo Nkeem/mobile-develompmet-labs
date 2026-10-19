@@ -17,4 +17,22 @@
     <string name="water_today">Полив сегодня</string>
     <string name="load_plants_failed">Не удалось загрузить растения</string>
     <string name="retry">Повторить</string>
+    <string name="plant_name">Название</string>
+    <string name="watering_interval_days">Интервал полива в днях</string>
+    <string name="last_watered">Последний полив</string>
+    <string name="plant_note">Заметка (необязательно)</string>
+    <string name="save">Сохранить</string>
+    <string name="saving">Сохранение…</string>
+    <string name="confirm">ОК</string>
+    <string name="cancel">Отмена</string>
+    <string name="name_required">Введите название</string>
+    <string name="name_too_long">Не более 60 символов</string>
+    <string name="interval_invalid">Введите целое число от 1 до 365</string>
+    <string name="date_in_future">Дата не может быть в будущем</string>
+    <string name="note_too_long">Не более 500 символов</string>
+    <string name="save_plant_failed">Не удалось сохранить. Попробуйте ещё раз</string>
+    <string name="load_plant_failed">Не удалось загрузить растение</string>
+    <string name="discard_changes">Отменить изменения?</string>
+    <string name="continue_editing">Продолжить</string>
+    <string name="exit_editor">Выйти</string>
 </resources>

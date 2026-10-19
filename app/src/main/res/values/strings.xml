@@ -17,4 +17,22 @@
     <string name="water_today">Water today</string>
     <string name="load_plants_failed">Could not load plants</string>
     <string name="retry">Retry</string>
+    <string name="plant_name">Name</string>
+    <string name="watering_interval_days">Watering interval in days</string>
+    <string name="last_watered">Last watered</string>
+    <string name="plant_note">Note (optional)</string>
+    <string name="save">Save</string>
+    <string name="saving">Saving…</string>
+    <string name="confirm">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="name_required">Enter a name</string>
+    <string name="name_too_long">No more than 60 characters</string>
+    <string name="interval_invalid">Enter a whole number from 1 to 365</string>
+    <string name="date_in_future">Date cannot be in the future</string>
+    <string name="note_too_long">No more than 500 characters</string>
+    <string name="save_plant_failed">Could not save. Please try again</string>
+    <string name="load_plant_failed">Could not load the plant</string>
+    <string name="discard_changes">Discard changes?</string>
+    <string name="continue_editing">Continue</string>
+    <string name="exit_editor">Exit</string>
 </resources>
