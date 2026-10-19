@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Обработка текста</string>
+    <string name="app_name">Трекер полива</string>
+    <string name="plants_title">Мои растения</string>
+    <string name="empty_plants_title">Пока нет растений</string>
+    <string name="empty_plants_hint">Добавьте первое растение и задайте график полива</string>
+    <string name="add_plant">Добавить растение</string>
+    <string name="plant_details_title">Карточка растения</string>
+    <string name="new_plant_title">Новое растение</string>
+    <string name="edit_plant_title">Редактирование</string>
+    <string name="editor_hint">Задайте удобный график полива</string>
+    <string name="edit_plant">Изменить</string>
+    <string name="navigate_back">Назад</string>
+    <string name="plant_not_found">Растение не найдено</string>
 </resources>

@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Обработка текста</string>
+    <string name="app_name">Plant watering tracker</string>
+    <string name="plants_title">My plants</string>
+    <string name="empty_plants_title">No plants yet</string>
+    <string name="empty_plants_hint">Add your first plant and set a watering schedule</string>
+    <string name="add_plant">Add plant</string>
+    <string name="plant_details_title">Plant details</string>
+    <string name="new_plant_title">New plant</string>
+    <string name="edit_plant_title">Edit plant</string>
+    <string name="editor_hint">Set a watering schedule</string>
+    <string name="edit_plant">Edit</string>
+    <string name="navigate_back">Back</string>
+    <string name="plant_not_found">Plant not found</string>
 </resources>
