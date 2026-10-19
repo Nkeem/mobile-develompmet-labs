@@ -1,0 +1,14 @@
+<resources>
+    <plurals name="watering_overdue">
+        <item quantity="one">Просрочено на %d день</item>
+        <item quantity="few">Просрочено на %d дня</item>
+        <item quantity="many">Просрочено на %d дней</item>
+        <item quantity="other">Просрочено на %d дня</item>
+    </plurals>
+    <plurals name="watering_in">
+        <item quantity="one">Через %d день</item>
+        <item quantity="few">Через %d дня</item>
+        <item quantity="many">Через %d дней</item>
+        <item quantity="other">Через %d дня</item>
+    </plurals>
+</resources>

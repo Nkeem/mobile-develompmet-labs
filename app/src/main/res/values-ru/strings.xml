@@ -11,4 +11,10 @@
     <string name="edit_plant">Изменить</string>
     <string name="navigate_back">Назад</string>
     <string name="plant_not_found">Растение не найдено</string>
+    <string name="upcoming_watering">Ближайший полив</string>
+    <string name="plant_list_hint">Сначала растения, которым нужен полив</string>
+    <string name="next_watering_on">Следующий полив · %1$s</string>
+    <string name="water_today">Полив сегодня</string>
+    <string name="load_plants_failed">Не удалось загрузить растения</string>
+    <string name="retry">Повторить</string>
 </resources>

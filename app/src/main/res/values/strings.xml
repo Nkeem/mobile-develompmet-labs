@@ -11,4 +11,10 @@
     <string name="edit_plant">Edit</string>
     <string name="navigate_back">Back</string>
     <string name="plant_not_found">Plant not found</string>
+    <string name="upcoming_watering">Upcoming watering</string>
+    <string name="plant_list_hint">Plants needing water come first</string>
+    <string name="next_watering_on">Next watering · %1$s</string>
+    <string name="water_today">Water today</string>
+    <string name="load_plants_failed">Could not load plants</string>
+    <string name="retry">Retry</string>
 </resources>
