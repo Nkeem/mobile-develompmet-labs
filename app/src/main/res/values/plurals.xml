@@ -7,4 +7,8 @@
         <item quantity="one">In %d day</item>
         <item quantity="other">In %d days</item>
     </plurals>
+    <plurals name="watering_every">
+        <item quantity="one">Every %d day</item>
+        <item quantity="other">Every %d days</item>
+    </plurals>
 </resources>

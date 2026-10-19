@@ -11,4 +11,10 @@
         <item quantity="many">Через %d дней</item>
         <item quantity="other">Через %d дня</item>
     </plurals>
+    <plurals name="watering_every">
+        <item quantity="one">Каждый %d день</item>
+        <item quantity="few">Каждые %d дня</item>
+        <item quantity="many">Каждые %d дней</item>
+        <item quantity="other">Каждые %d дня</item>
+    </plurals>
 </resources>

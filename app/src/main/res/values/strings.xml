@@ -35,4 +35,18 @@
     <string name="discard_changes">Discard changes?</string>
     <string name="continue_editing">Continue</string>
     <string name="exit_editor">Exit</string>
+    <string name="next_watering">Next watering</string>
+    <string name="watering_interval">Watering interval</string>
+    <string name="details_note">Note</string>
+    <string name="no_note">No note added</string>
+    <string name="watered_today">Watered today</string>
+    <string name="already_watered_today">Already watered today</string>
+    <string name="watering_recorded">Watering recorded</string>
+    <string name="delete_plant">Delete plant</string>
+    <string name="delete_plant_title">Delete plant?</string>
+    <string name="delete_plant_message">Delete “%1$s”?</string>
+    <string name="delete">Delete</string>
+    <string name="water_plant_failed">Could not record watering. Please try again</string>
+    <string name="delete_plant_failed">Could not delete the plant. Please try again</string>
+    <string name="working">Please wait…</string>
 </resources>

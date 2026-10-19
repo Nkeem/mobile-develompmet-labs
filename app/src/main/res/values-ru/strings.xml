@@ -35,4 +35,18 @@
     <string name="discard_changes">Отменить изменения?</string>
     <string name="continue_editing">Продолжить</string>
     <string name="exit_editor">Выйти</string>
+    <string name="next_watering">Следующий полив</string>
+    <string name="watering_interval">Интервал полива</string>
+    <string name="details_note">Заметка</string>
+    <string name="no_note">Заметка не добавлена</string>
+    <string name="watered_today">Полито сегодня</string>
+    <string name="already_watered_today">Сегодня уже полито</string>
+    <string name="watering_recorded">Полив отмечен</string>
+    <string name="delete_plant">Удалить растение</string>
+    <string name="delete_plant_title">Удалить растение?</string>
+    <string name="delete_plant_message">Удалить «%1$s»?</string>
+    <string name="delete">Удалить</string>
+    <string name="water_plant_failed">Не удалось отметить полив. Попробуйте ещё раз</string>
+    <string name="delete_plant_failed">Не удалось удалить растение. Попробуйте ещё раз</string>
+    <string name="working">Подождите…</string>
 </resources>
