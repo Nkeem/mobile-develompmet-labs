@@ -2,6 +2,7 @@ package com.example.myapplication.ui.plant
 
 import androidx.activity.compose.BackHandler
 import androidx.annotation.StringRes
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,11 +19,14 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -37,8 +41,12 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.error
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.myapplication.R
 import com.example.myapplication.domain.plant.PlantNameError
 import java.time.LocalDate
@@ -91,6 +99,8 @@ fun PlantEditorScreen(
                 val dateFormatter = remember(locale) {
                     DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM).withLocale(locale)
                 }
+                val dateLabel = stringResource(R.string.last_watered)
+                val dateError = if (errors?.dateInFuture == true) stringResource(R.string.date_in_future) else null
                 Column(
                     modifier = Modifier.fillMaxSize()
                         .padding(padding)
@@ -98,16 +108,18 @@ fun PlantEditorScreen(
                         .imePadding()
                         .verticalScroll(rememberScrollState())
                         .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(24.dp),
                 ) {
                     Text(
                         text = stringResource(R.string.editor_hint),
+                        style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                     EditorTextField(
                         value = form.name,
                         onValueChange = onNameChange,
                         label = R.string.plant_name,
+                        placeholder = R.string.plant_name_hint,
                         error = when (errors?.name) {
                             PlantNameError.REQUIRED -> R.string.name_required
                             PlantNameError.TOO_LONG -> R.string.name_too_long
@@ -123,32 +135,50 @@ fun PlantEditorScreen(
                         keyboardType = KeyboardType.Number,
                         enabled = enabled,
                     )
-                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Text(
+                            text = dateLabel,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = if (dateError == null) MaterialTheme.colorScheme.onSurface
+                                else MaterialTheme.colorScheme.error,
+                        )
                         OutlinedCard(
                             onClick = { focusManager.clearFocus(); showDatePicker = true },
                             enabled = enabled,
-                            modifier = Modifier.fillMaxWidth(),
+                            modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp).semantics {
+                                contentDescription = dateLabel
+                                if (dateError != null) error(dateError)
+                            },
                             shape = RoundedCornerShape(16.dp),
+                            border = BorderStroke(
+                                1.dp,
+                                if (dateError == null) MaterialTheme.colorScheme.outline
+                                    else MaterialTheme.colorScheme.error,
+                            ),
+                            colors = CardDefaults.outlinedCardColors(
+                                containerColor = MaterialTheme.colorScheme.background,
+                            ),
                         ) {
                             Row(
                                 modifier = Modifier.fillMaxWidth().padding(16.dp),
                                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                                 verticalAlignment = Alignment.CenterVertically,
                             ) {
-                                Column(modifier = Modifier.weight(1f)) {
-                                    Text(
-                                        stringResource(R.string.last_watered),
-                                        style = MaterialTheme.typography.bodySmall,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    )
-                                    Text(form.lastWateredDate.format(dateFormatter))
-                                }
-                                Icon(painterResource(R.drawable.ic_calendar), contentDescription = null)
+                                Text(
+                                    text = form.lastWateredDate.format(dateFormatter),
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    modifier = Modifier.weight(1f),
+                                )
+                                Icon(
+                                    painter = painterResource(R.drawable.ic_calendar),
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
                             }
                         }
-                        if (errors?.dateInFuture == true) {
+                        if (dateError != null) {
                             Text(
-                                stringResource(R.string.date_in_future),
+                                text = dateError,
                                 color = MaterialTheme.colorScheme.error,
                                 style = MaterialTheme.typography.bodySmall,
                                 modifier = Modifier.padding(horizontal = 16.dp),
@@ -159,6 +189,7 @@ fun PlantEditorScreen(
                         value = form.note,
                         onValueChange = onNoteChange,
                         label = R.string.plant_note,
+                        placeholder = R.string.plant_note_hint,
                         error = if (errors?.noteTooLong == true) R.string.note_too_long else null,
                         singleLine = false,
                         enabled = enabled,
@@ -189,9 +220,27 @@ fun PlantEditorScreen(
     if (showExitDialog) {
         AlertDialog(
             onDismissRequest = { showExitDialog = false },
-            title = { Text(stringResource(R.string.discard_changes)) },
+            shape = RoundedCornerShape(28.dp),
+            containerColor = MaterialTheme.colorScheme.surface,
+            title = {
+                Text(
+                    stringResource(R.string.discard_changes),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontSize = 20.sp,
+                )
+            },
+            text = {
+                Text(
+                    stringResource(R.string.discard_changes_message),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            },
             confirmButton = {
-                TextButton(onClick = onClose) { Text(stringResource(R.string.exit_editor)) }
+                TextButton(
+                    onClick = onClose,
+                    colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error),
+                ) { Text(stringResource(R.string.exit_editor)) }
             },
             dismissButton = {
                 TextButton(onClick = { showExitDialog = false }) { Text(stringResource(R.string.continue_editing)) }
@@ -207,20 +256,33 @@ private fun EditorTextField(
     @StringRes label: Int,
     @StringRes error: Int?,
     enabled: Boolean,
+    @StringRes placeholder: Int? = null,
     singleLine: Boolean = true,
     keyboardType: KeyboardType = KeyboardType.Text,
 ) {
-    OutlinedTextField(
-        value = value,
-        onValueChange = onValueChange,
-        label = { Text(stringResource(label)) },
-        modifier = Modifier.fillMaxWidth(),
-        enabled = enabled,
-        singleLine = singleLine,
-        minLines = if (singleLine) 1 else 3,
-        keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
-        isError = error != null,
-        supportingText = if (error != null) { { Text(stringResource(error)) } } else null,
-        shape = RoundedCornerShape(16.dp),
-    )
+    val labelText = stringResource(label)
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Text(
+            text = labelText,
+            style = MaterialTheme.typography.bodyMedium,
+            color = if (error == null) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.error,
+        )
+        OutlinedTextField(
+            value = value,
+            onValueChange = onValueChange,
+            placeholder = if (placeholder != null) { { Text(stringResource(placeholder)) } } else null,
+            modifier = Modifier.fillMaxWidth()
+                .heightIn(min = if (singleLine) 56.dp else 96.dp)
+                .semantics { contentDescription = labelText },
+            enabled = enabled,
+            singleLine = singleLine,
+            minLines = if (singleLine) 1 else 2,
+            textStyle = MaterialTheme.typography.bodyLarge,
+            keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
+            isError = error != null,
+            supportingText = if (error != null) { { Text(stringResource(error)) } } else null,
+            shape = RoundedCornerShape(16.dp),
+            colors = OutlinedTextFieldDefaults.colors(unfocusedBorderColor = MaterialTheme.colorScheme.outline),
+        )
+    }
 }

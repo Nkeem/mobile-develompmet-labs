@@ -33,6 +33,7 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.myapplication.R
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -175,8 +176,22 @@ fun PlantDetailsScreen(
     if (showDeleteDialog && uiState.details != null && !uiState.isDeleted && !uiState.notFound) {
         AlertDialog(
             onDismissRequest = { showDeleteDialog = false },
-            title = { Text(stringResource(R.string.delete_plant_title)) },
-            text = { Text(stringResource(R.string.delete_plant_message, uiState.details.plant.name)) },
+            shape = RoundedCornerShape(28.dp),
+            containerColor = MaterialTheme.colorScheme.surface,
+            title = {
+                Text(
+                    stringResource(R.string.delete_plant_title),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontSize = 20.sp,
+                )
+            },
+            text = {
+                Text(
+                    stringResource(R.string.delete_plant_message, uiState.details.plant.name),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            },
             confirmButton = {
                 TextButton(
                     enabled = uiState.canAct,

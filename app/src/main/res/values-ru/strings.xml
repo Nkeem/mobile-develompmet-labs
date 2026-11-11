@@ -17,7 +17,7 @@
     <string name="water_today">Полив сегодня</string>
     <string name="load_plants_failed">Не удалось загрузить растения</string>
     <string name="retry">Повторить</string>
-    <string name="plant_name">Название</string>
+    <string name="plant_name">Название растения</string>
     <string name="watering_interval_days">Интервал полива в днях</string>
     <string name="last_watered">Последний полив</string>
     <string name="plant_note">Заметка (необязательно)</string>
@@ -49,4 +49,7 @@
     <string name="water_plant_failed">Не удалось отметить полив. Попробуйте ещё раз</string>
     <string name="delete_plant_failed">Не удалось удалить растение. Попробуйте ещё раз</string>
     <string name="working">Подождите…</string>
+    <string name="plant_name_hint">Например, монстера</string>
+    <string name="plant_note_hint">Место или особенности ухода</string>
+    <string name="discard_changes_message">Несохранённые изменения будут потеряны.</string>
 </resources>
