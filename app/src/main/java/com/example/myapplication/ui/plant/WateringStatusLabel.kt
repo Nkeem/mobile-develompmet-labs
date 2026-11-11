@@ -1,14 +1,12 @@
 package com.example.myapplication.ui.plant
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -25,15 +23,14 @@ fun WateringStatusLabel(watering: WateringSchedule) {
         WateringStatus.UPCOMING -> pluralStringResource(R.plurals.watering_in, quantity, watering.days)
     }
     val colors = MaterialTheme.colorScheme
-    val dark = isSystemInDarkTheme()
     val foreground = when (watering.status) {
         WateringStatus.OVERDUE -> colors.error
-        WateringStatus.TODAY -> if (dark) Color(0xFFF0C77B) else Color(0xFF8A5B16)
+        WateringStatus.TODAY -> colors.tertiary
         WateringStatus.UPCOMING -> colors.primary
     }
     val background = when (watering.status) {
         WateringStatus.OVERDUE -> colors.errorContainer
-        WateringStatus.TODAY -> if (dark) Color(0xFF45371F) else Color(0xFFFFF1D5)
+        WateringStatus.TODAY -> colors.tertiaryContainer
         WateringStatus.UPCOMING -> colors.primaryContainer
     }
     Text(
