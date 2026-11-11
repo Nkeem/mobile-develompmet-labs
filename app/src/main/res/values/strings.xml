@@ -17,7 +17,7 @@
     <string name="water_today">Water today</string>
     <string name="load_plants_failed">Could not load plants</string>
     <string name="retry">Retry</string>
-    <string name="plant_name">Name</string>
+    <string name="plant_name">Plant name</string>
     <string name="watering_interval_days">Watering interval in days</string>
     <string name="last_watered">Last watered</string>
     <string name="plant_note">Note (optional)</string>
@@ -49,4 +49,7 @@
     <string name="water_plant_failed">Could not record watering. Please try again</string>
     <string name="delete_plant_failed">Could not delete the plant. Please try again</string>
     <string name="working">Please wait…</string>
+    <string name="plant_name_hint">For example, monstera</string>
+    <string name="plant_note_hint">Location or care notes</string>
+    <string name="discard_changes_message">Unsaved changes will be lost.</string>
 </resources>

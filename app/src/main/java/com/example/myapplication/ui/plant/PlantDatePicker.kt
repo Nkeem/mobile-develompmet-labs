@@ -4,6 +4,7 @@ import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDefaults
 import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SelectableDates
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -40,8 +41,10 @@ fun PlantDatePicker(
     )
     val date = state.selectedDateMillis?.toUtcDate()
 
+    val colors = DatePickerDefaults.colors(containerColor = MaterialTheme.colorScheme.surface)
     DatePickerDialog(
         onDismissRequest = onDismiss,
+        colors = colors,
         confirmButton = {
             TextButton(
                 enabled = date != null && !date.isAfter(LocalDate.now()),
@@ -58,7 +61,7 @@ fun PlantDatePicker(
             TextButton(onClick = onDismiss) { Text(stringResource(R.string.cancel)) }
         },
     ) {
-        DatePicker(state = state, showModeToggle = false)
+        DatePicker(state = state, showModeToggle = false, colors = colors)
     }
 }
 

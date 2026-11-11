@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -30,7 +31,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.myapplication.R
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -81,7 +84,18 @@ fun PlantDetailsScreen(
                         .verticalScroll(scrollState).padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(24.dp),
                 ) {
-                    Text(plant.name, style = MaterialTheme.typography.headlineSmall)
+                    Column(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(12.dp),
+                    ) {
+                        PlantSymbol(Modifier.size(88.dp))
+                        Text(
+                            plant.name,
+                            style = MaterialTheme.typography.headlineSmall,
+                            textAlign = TextAlign.Center,
+                        )
+                    }
                     Surface(
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(16.dp),
@@ -89,10 +103,14 @@ fun PlantDetailsScreen(
                         contentColor = MaterialTheme.colorScheme.onSurface,
                     ) {
                         Column(
-                            modifier = Modifier.padding(16.dp),
+                            modifier = Modifier.padding(20.dp),
                             verticalArrangement = Arrangement.spacedBy(12.dp),
                         ) {
-                            Text(stringResource(R.string.next_watering), style = MaterialTheme.typography.bodyMedium)
+                            Text(
+                                stringResource(R.string.next_watering),
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
                             Text(
                                 details.watering.nextWateringDate.format(dateFormatter),
                                 style = MaterialTheme.typography.titleLarge,
@@ -100,45 +118,56 @@ fun PlantDetailsScreen(
                             WateringStatusLabel(details.watering)
                         }
                     }
-                    Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                        DetailValue(
-                            label = stringResource(R.string.watering_interval),
-                            value = pluralStringResource(
-                                R.plurals.watering_every, plant.wateringIntervalDays, plant.wateringIntervalDays,
-                            ),
-                        )
-                        DetailValue(
-                            label = stringResource(R.string.last_watered),
-                            value = LocalDate.ofEpochDay(plant.lastWateredEpochDay).format(dateFormatter),
-                        )
-                        DetailValue(
-                            label = stringResource(R.string.details_note),
-                            value = plant.note.ifEmpty { stringResource(R.string.no_note) },
-                        )
-                    }
-                    Button(
-                        onClick = onWater,
-                        enabled = uiState.canAct && !details.watering.wateredToday,
-                        modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp),
+                    Surface(
+                        modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(16.dp),
+                        color = MaterialTheme.colorScheme.surface,
                     ) {
-                        Text(
-                            stringResource(
-                                when {
-                                    uiState.isBusy -> R.string.working
-                                    details.watering.wateredToday -> R.string.already_watered_today
-                                    else -> R.string.watered_today
-                                },
-                            ),
-                        )
+                        Column(
+                            modifier = Modifier.padding(16.dp),
+                            verticalArrangement = Arrangement.spacedBy(16.dp),
+                        ) {
+                            DetailValue(
+                                label = stringResource(R.string.watering_interval),
+                                value = pluralStringResource(
+                                    R.plurals.watering_every, plant.wateringIntervalDays, plant.wateringIntervalDays,
+                                ),
+                            )
+                            DetailValue(
+                                label = stringResource(R.string.last_watered),
+                                value = LocalDate.ofEpochDay(plant.lastWateredEpochDay).format(dateFormatter),
+                            )
+                            DetailValue(
+                                label = stringResource(R.string.details_note),
+                                value = plant.note.ifEmpty { stringResource(R.string.no_note) },
+                            )
+                        }
                     }
-                    TextButton(
-                        onClick = { showDeleteDialog = true },
-                        enabled = uiState.canAct,
-                        modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp),
-                        colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error),
-                    ) {
-                        Text(stringResource(R.string.delete_plant))
+                    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Button(
+                            onClick = onWater,
+                            enabled = uiState.canAct && !details.watering.wateredToday,
+                            modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp),
+                            shape = RoundedCornerShape(16.dp),
+                        ) {
+                            Text(
+                                stringResource(
+                                    when {
+                                        uiState.isBusy -> R.string.working
+                                        details.watering.wateredToday -> R.string.already_watered_today
+                                        else -> R.string.watered_today
+                                    },
+                                ),
+                            )
+                        }
+                        TextButton(
+                            onClick = { showDeleteDialog = true },
+                            enabled = uiState.canAct,
+                            modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp),
+                            colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error),
+                        ) {
+                            Text(stringResource(R.string.delete_plant))
+                        }
                     }
                 }
             }
@@ -147,8 +176,22 @@ fun PlantDetailsScreen(
     if (showDeleteDialog && uiState.details != null && !uiState.isDeleted && !uiState.notFound) {
         AlertDialog(
             onDismissRequest = { showDeleteDialog = false },
-            title = { Text(stringResource(R.string.delete_plant_title)) },
-            text = { Text(stringResource(R.string.delete_plant_message, uiState.details.plant.name)) },
+            shape = RoundedCornerShape(28.dp),
+            containerColor = MaterialTheme.colorScheme.surface,
+            title = {
+                Text(
+                    stringResource(R.string.delete_plant_title),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontSize = 20.sp,
+                )
+            },
+            text = {
+                Text(
+                    stringResource(R.string.delete_plant_message, uiState.details.plant.name),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            },
             confirmButton = {
                 TextButton(
                     enabled = uiState.canAct,
@@ -171,7 +214,7 @@ fun PlantDetailsScreen(
 @Composable
 private fun DetailValue(label: String, value: String) {
     Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        Text(label, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text(label, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         Text(value, style = MaterialTheme.typography.bodyLarge)
     }
 }

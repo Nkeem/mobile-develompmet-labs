@@ -4,9 +4,14 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -52,6 +57,7 @@ fun PlantListScreen(
             if (uiState is PlantListUiState.Content && uiState.plants.isNotEmpty()) {
                 FloatingActionButton(
                     onClick = onAddPlant,
+                    shape = RoundedCornerShape(16.dp),
                     containerColor = MaterialTheme.colorScheme.primary,
                     contentColor = MaterialTheme.colorScheme.onPrimary,
                 ) {
@@ -81,6 +87,7 @@ fun PlantListScreen(
                     actionLabel = stringResource(R.string.add_plant),
                     onAction = onAddPlant,
                     modifier = contentModifier,
+                    showSymbol = true,
                 )
             } else {
                 LazyColumn(
@@ -90,7 +97,10 @@ fun PlantListScreen(
                     verticalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
                     item {
-                        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Column(
+                            modifier = Modifier.padding(bottom = 12.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
                             Text(
                                 text = stringResource(R.string.upcoming_watering),
                                 style = MaterialTheme.typography.titleMedium,
@@ -98,6 +108,7 @@ fun PlantListScreen(
                             )
                             Text(
                                 text = stringResource(R.string.plant_list_hint),
+                                style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
                         }
@@ -122,22 +133,29 @@ private fun PlantListRow(item: PlantListItem, nextDate: String, onClick: () -> U
         shape = RoundedCornerShape(16.dp),
         color = MaterialTheme.colorScheme.surface,
     ) {
-        Column(
-            modifier = Modifier.fillMaxWidth().padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+        Row(
+            modifier = Modifier.fillMaxWidth().heightIn(min = 112.dp).padding(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text(
-                text = item.name,
-                style = MaterialTheme.typography.titleMedium,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis,
-            )
-            Text(
-                text = stringResource(R.string.next_watering_on, nextDate),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            WateringStatusLabel(item.watering)
+            PlantSymbol(Modifier.size(48.dp))
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                Text(
+                    text = item.name,
+                    style = MaterialTheme.typography.titleMedium,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                Text(
+                    text = stringResource(R.string.next_watering_on, nextDate),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                WateringStatusLabel(item.watering)
+            }
         }
     }
 }
@@ -149,22 +167,33 @@ private fun PlantListMessage(
     onAction: () -> Unit,
     modifier: Modifier,
     message: String? = null,
+    showSymbol: Boolean = false,
 ) {
     Box(modifier.padding(16.dp), contentAlignment = Alignment.Center) {
         Column(
-            modifier = Modifier.verticalScroll(rememberScrollState()).padding(16.dp),
+            modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState()),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
+            if (showSymbol) {
+                PlantSymbol(Modifier.size(88.dp))
+                Spacer(Modifier.height(24.dp))
+            }
             Text(title, style = MaterialTheme.typography.titleLarge, textAlign = TextAlign.Center)
             if (message != null) {
+                Spacer(Modifier.height(12.dp))
                 Text(
                     text = message,
+                    style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center,
                 )
             }
-            Button(onClick = onAction, modifier = Modifier.fillMaxWidth()) {
+            Spacer(Modifier.height(24.dp))
+            Button(
+                onClick = onAction,
+                modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp),
+                shape = RoundedCornerShape(16.dp),
+            ) {
                 Text(actionLabel)
             }
         }
