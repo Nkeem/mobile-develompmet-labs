@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300">
+<rect width="960" height="300" fill="#FFFFFF"/>
+<rect x="32" y="72" width="256" height="92" rx="16" fill="#E7F1E6" stroke="#D2DCD1"/>
+<text x="97.83333333333334" y="110.84" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#1D2B20">Мои растения</text>
+<text x="103.83333333333334" y="140.08" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#536457">PlantListActivity</text>
+<rect x="352" y="72" width="256" height="92" rx="16" fill="#E7F1E6" stroke="#D2DCD1"/>
+<text x="395.8385416666667" y="110.84" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#1D2B20">Карточка растения</text>
+<text x="411.6666666666667" y="140.08" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#536457">PlantDetailsActivity</text>
+<rect x="672" y="72" width="256" height="92" rx="16" fill="#E7F1E6" stroke="#D2DCD1"/>
+<text x="704.0026041666666" y="110.84" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#1D2B20">Добавление и правка</text>
+<text x="735.3333333333334" y="140.08" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#536457">PlantEditorActivity</text>
+<polyline points="288,118 344,118" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="334,112 344,118 334,124" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="608,118 664,118" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="654,112 664,118 654,124" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="160,164 160,238 800,238 800,164" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="794,174 800,164 806,174" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="402.1640625" y="222.08" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#2E6B45">Добавить растение</text>
+<text x="212.86979166666669" y="286.08" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#536457">Сохранение и Назад возвращают к экрану, из которого открыта форма</text>
+</svg>

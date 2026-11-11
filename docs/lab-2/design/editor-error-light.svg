@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="800" viewBox="0 0 360 800">
+<rect width="360" height="800" fill="#F6F8F4"/>
+<text x="16" y="18.560000000000002" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1D2B20">9:41</text>
+<rect x="292" y="16" width="3" height="4" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="297" y="13" width="3" height="7" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="302" y="10" width="3" height="10" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="320" y="10" width="20" height="9" rx="2" fill="#1D2B20" stroke="none"/>
+<rect x="341" y="13" width="2" height="3" rx="0" fill="#1D2B20" stroke="none"/>
+<polyline points="29,44 19,54 29,64" fill="none" stroke="#1D2B20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="19,54 38,54" fill="none" stroke="#1D2B20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56" y="62.6" font-family="Arial, sans-serif" font-size="20" font-weight="600" fill="#1D2B20">Новое растение</text>
+<rect x="124" y="786" width="112" height="4" rx="2" fill="#1D2B20" stroke="none"/>
+<text x="16" y="120.32" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#536457">Задайте удобный график полива</text>
+<text x="16" y="160.32" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#1D2B20">Название растения</text>
+<rect x="16" y="176" width="328" height="56" rx="16" fill="#F6F8F4" stroke="#9D3933"/>
+<text x="32" y="208.32" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#536457">Например, монстера</text>
+<text x="32" y="248.56" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#9D3933">Введите название</text>
+<text x="16" y="288.32" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#1D2B20">Интервал полива в днях</text>
+<rect x="16" y="304" width="328" height="56" rx="16" fill="#F6F8F4" stroke="#9D3933"/>
+<text x="32" y="338.08" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#1D2B20">0</text>
+<text x="32" y="376.56" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#9D3933">Введите целое число от 1 до 365</text>
+<text x="16" y="416.32" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#1D2B20">Последний полив</text>
+<rect x="16" y="432" width="328" height="56" rx="16" fill="#F6F8F4" stroke="#D2DCD1"/>
+<text x="32" y="466.08" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#1D2B20">8 окт. 2026</text>
+<rect x="306" y="450" width="20" height="18" rx="2" fill="#F6F8F4" stroke="#536457"/>
+<polyline points="306,456 326,456" fill="none" stroke="#536457" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="311,447 311,452" fill="none" stroke="#536457" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="321,447 321,452" fill="none" stroke="#536457" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="16" y="516.32" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#1D2B20">Заметка (необязательно)</text>
+<rect x="16" y="532" width="328" height="96" rx="16" fill="#F6F8F4" stroke="#D2DCD1"/>
+<text x="32" y="564.32" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#536457">Место или особенности ухода</text>
+<rect x="16" y="652" width="328" height="52" rx="16" fill="#2E6B45" stroke="none"/>
+<text x="142.3359375" y="682.32" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Сохранить</text>
+</svg>

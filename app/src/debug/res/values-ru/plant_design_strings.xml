@@ -1,0 +1,37 @@
+<resources>
+    <string name="design_list_title">Мои растения</string>
+    <string name="design_upcoming">Ближайший полив</string>
+    <string name="design_list_hint">Сначала растения, которым нужен полив</string>
+    <string name="design_details_title">Карточка растения</string>
+    <string name="design_editor_title">Новое растение</string>
+    <string name="design_editor_hint">Задайте удобный график полива</string>
+    <string name="design_edit">Изменить</string>
+    <string name="design_add">Добавить растение</string>
+    <string name="design_back">Назад</string>
+    <string name="design_next">Следующий полив</string>
+    <string name="design_next_on">Следующий полив · %1$s</string>
+    <string name="design_last">Последний полив</string>
+    <string name="design_interval">Интервал полива</string>
+    <string name="design_every_seven">Каждые 7 дней</string>
+    <string name="design_note">Заметка</string>
+    <string name="design_sample_note">У окна на кухне</string>
+    <string name="design_water">Полито сегодня</string>
+    <string name="design_delete">Удалить растение</string>
+    <string name="design_name">Название растения</string>
+    <string name="design_name_hint">Например, монстера</string>
+    <string name="design_days_label">Интервал полива в днях</string>
+    <string name="design_note_label">Заметка (необязательно)</string>
+    <string name="design_note_hint">Место или особенности ухода</string>
+    <string name="design_save">Сохранить</string>
+    <string name="design_name_error">Введите название</string>
+    <string name="design_days_error">Введите целое число от 1 до 365</string>
+    <string name="design_empty_title">Пока нет растений</string>
+    <string name="design_empty_hint">Добавьте первое растение и задайте график полива</string>
+    <string name="design_today_status">Полив сегодня</string>
+    <string name="design_overdue_status">Просрочено на 1 день</string>
+    <string name="design_future_status">Через 4 дня</string>
+    <string name="design_today_date">8 окт. 2026</string>
+    <string name="design_last_date">1 окт. 2026</string>
+    <string name="design_overdue_date">7 окт. 2026</string>
+    <string name="design_future_date">12 окт. 2026</string>
+</resources>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="800" viewBox="0 0 360 800">
+<rect width="360" height="800" fill="#F6F8F4"/>
+<text x="16" y="18.560000000000002" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1D2B20">9:41</text>
+<rect x="292" y="16" width="3" height="4" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="297" y="13" width="3" height="7" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="302" y="10" width="3" height="10" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="320" y="10" width="20" height="9" rx="2" fill="#1D2B20" stroke="none"/>
+<rect x="341" y="13" width="2" height="3" rx="0" fill="#1D2B20" stroke="none"/>
+<text x="16" y="66.12" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#1D2B20">Мои растения</text>
+<rect x="124" y="786" width="112" height="4" rx="2" fill="#1D2B20" stroke="none"/>
+<rect x="136" y="260" width="88" height="88" rx="44.0" fill="#E7F1E6" stroke="none"/>
+<polyline points="162.4,320.72 158.0,302.24 167.68,289.04 183.52,282.88 202.0,281.12 199.36,302.24 190.56,317.2 176.48000000000002,324.24 162.4,320.72" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="158.88,326.88 191.44,293.44" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="70.00260416666667" y="395.12" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#1D2B20">Пока нет растений</text>
+<text x="34.34375" y="431.32" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#536457">Добавьте первое растение и задайте график</text>
+<text x="156.8359375" y="450.32" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#536457">полива</text>
+<rect x="16" y="481" width="328" height="52" rx="16" fill="#2E6B45" stroke="none"/>
+<text x="112.33072916666667" y="511.32" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Добавить растение</text>
+</svg>

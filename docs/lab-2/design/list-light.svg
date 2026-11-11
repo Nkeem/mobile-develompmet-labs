@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="800" viewBox="0 0 360 800">
+<rect width="360" height="800" fill="#F6F8F4"/>
+<text x="16" y="18.560000000000002" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1D2B20">9:41</text>
+<rect x="292" y="16" width="3" height="4" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="297" y="13" width="3" height="7" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="302" y="10" width="3" height="10" rx="1" fill="#1D2B20" stroke="none"/>
+<rect x="320" y="10" width="20" height="9" rx="2" fill="#1D2B20" stroke="none"/>
+<rect x="341" y="13" width="2" height="3" rx="0" fill="#1D2B20" stroke="none"/>
+<text x="16" y="66.12" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#1D2B20">Мои растения</text>
+<rect x="124" y="786" width="112" height="4" rx="2" fill="#1D2B20" stroke="none"/>
+<text x="16" y="123.84" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#2E6B45">Ближайший полив</text>
+<text x="16" y="152.32" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#536457">Сначала растения, которым нужен полив</text>
+<rect x="16" y="176" width="328" height="112" rx="16" fill="#FFFFFF" stroke="none"/>
+<rect x="32" y="208" width="48" height="48" rx="24.0" fill="#E7F1E6" stroke="none"/>
+<polyline points="46.4,241.12 44.0,231.04 49.28,223.84 57.92,220.48 68.0,219.52 66.56,231.04 61.76,239.2 54.08,243.04 46.4,241.12" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="44.480000000000004,244.48000000000002 62.24,226.24" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="92" y="207.84" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#1D2B20">Фикус</text>
+<text x="92" y="232.56" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#536457">Следующий полив · 7 окт. 2026</text>
+<rect x="92" y="246" width="148.66145833333334" height="24" rx="8" fill="#FCE9E7" stroke="none"/>
+<text x="100" y="262.56" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#9D3933">Просрочено на 1 день</text>
+<rect x="16" y="300" width="328" height="112" rx="16" fill="#FFFFFF" stroke="none"/>
+<rect x="32" y="332" width="48" height="48" rx="24.0" fill="#E7F1E6" stroke="none"/>
+<polyline points="46.4,365.12 44.0,355.04 49.28,347.84 57.92,344.48 68.0,343.52 66.56,355.04 61.76,363.2 54.08,367.04 46.4,365.12" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="44.480000000000004,368.48 62.24,350.24" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="92" y="331.84" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#1D2B20">Монстера</text>
+<text x="92" y="356.56" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#536457">Следующий полив · 8 окт. 2026</text>
+<rect x="92" y="370" width="105.328125" height="24" rx="8" fill="#FFF1D5" stroke="none"/>
+<text x="100" y="386.56" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#8A5B16">Полив сегодня</text>
+<rect x="16" y="424" width="328" height="112" rx="16" fill="#FFFFFF" stroke="none"/>
+<rect x="32" y="456" width="48" height="48" rx="24.0" fill="#E7F1E6" stroke="none"/>
+<polyline points="46.4,489.12 44.0,479.04 49.28,471.84 57.92,468.48 68.0,467.52 66.56,479.04 61.76,487.2 54.08,491.04 46.4,489.12" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="44.480000000000004,492.48 62.24,474.24" fill="none" stroke="#2E6B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="92" y="455.84" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#1D2B20">Сансевиерия</text>
+<text x="92" y="480.56" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#536457">Следующий полив · 12 окт. 2026</text>
+<rect x="92" y="494" width="86.33333333333333" height="24" rx="8" fill="#E7F1E6" stroke="none"/>
+<text x="100" y="510.56" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#2E6B45">Через 4 дня</text>
+<rect x="288" y="704" width="56" height="56" rx="16" fill="#2E6B45" stroke="none"/>
+<polyline points="304,732 328,732" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="316,720 316,744" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
